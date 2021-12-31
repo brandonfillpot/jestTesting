@@ -52,3 +52,11 @@ test("user fetched name should be leanne graham", () => {
     expect(data.name).toEqual("Leanne Graham");
   });
 });
+
+//async await
+
+test("user fetched name should be leanne graham", async () => {
+  expect.assertions(1);
+  const data = await functions.fetchUser();
+  expect(data.name).toEqual("Leanne Graham");
+});
