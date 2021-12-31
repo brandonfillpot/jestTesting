@@ -1,4 +1,25 @@
+const { ComputeFaceDescriptorsTaskBase } = require("face-api.js");
 const functions = require("./functions");
+
+// beforeEach(() => initDatabase());
+// afterEach(() => closeDatabase());
+
+// beforeAll(() => initDatabase());
+// afterAll(() => closeDatabase());
+
+const nameCheck = () => console.log("Checking Name...");
+
+describe("Checking Names", () => {
+  beforeEach(() => nameCheck());
+
+  test("User is Brandon", () => {
+    const user = "Brandon";
+    expect(user).toBe("Brandon");
+  });
+});
+
+const initDatabase = () => console.log("Database Initialized...");
+const closeDatabase = () => console.log("Database Closed...");
 
 test("Adds 2 plus 2 to equal 4", () => {
   expect(functions.add(2, 2)).toBe(4);
